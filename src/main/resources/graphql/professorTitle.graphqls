@@ -1,0 +1,15 @@
+
+type ProfessorTitle {
+    id: Int
+    name: String!
+    version: Int
+    createdOn: String
+    updatedOn: String
+}
+
+input ProfessorTitleInput {
+    id: Int
+    name: String!
+    version: Int
+}
+

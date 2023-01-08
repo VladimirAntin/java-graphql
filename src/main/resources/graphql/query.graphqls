@@ -1,0 +1,18 @@
+
+type Query {
+    professorTitles(page: Int, size: Int): PageProfessorTitle
+    professorTitle(id: Int): ProfessorTitle
+ }
+
+type Mutation {
+    createProfessorTitle(professorTitle: ProfessorTitleInput!): ProfessorTitle!
+    updateProfessorTitle(professorTitle: ProfessorTitleInput!): ProfessorTitle!
+    deleteProfessorTitle(id: Int!): String!
+}
+
+type PageProfessorTitle {
+    content: [ProfessorTitle]
+    totalPages: Int
+    totalElements: Int
+}
+
