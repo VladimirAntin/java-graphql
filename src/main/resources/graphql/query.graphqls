@@ -2,17 +2,34 @@
 type Query {
     professorTitles(page: Int, size: Int): PageProfessorTitle
     professorTitle(id: Int): ProfessorTitle
+
+    courses(page: Int, size: Int): PageCourse
+    course(id: Int): Course
+
+    professors(page: Int, size: Int): PageProfessor
+    professor(id: Int): Professor
+
+    students(page: Int, size: Int): PageStudent
+    student(id: Int): Student
  }
 
 type Mutation {
     createProfessorTitle(professorTitle: ProfessorTitleInput!): ProfessorTitle!
     updateProfessorTitle(professorTitle: ProfessorTitleInput!): ProfessorTitle!
     deleteProfessorTitle(id: Int!): String!
+
+    createCourse(course: CourseInput!): Course!
+    updateCourse(course: CourseInput!): Course!
+    deleteCourse(id: Int!): String!
+
+    createProfessor(professor: ProfessorInput!): Professor!
+    updateProfessor(professor: ProfessorInput!): Professor!
+    deleteProfessor(id: Int!): String!
+
+    createStudent(student: StudentInput!): Student!
+    updateStudent(student: StudentInput!): Student!
+    deleteStudent(id: Int!): String!
+
 }
 
-type PageProfessorTitle {
-    content: [ProfessorTitle]
-    totalPages: Int
-    totalElements: Int
-}
 

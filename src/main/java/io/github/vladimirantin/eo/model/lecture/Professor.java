@@ -18,7 +18,7 @@ import javax.validation.constraints.NotNull;
  */
 @Entity
 @Where(clause = GlobalVariables.WHERE_CLAUSE)
-@CoreImpl(type =  {CoreImpl.ImplType.REPO, CoreImpl.ImplType.SERVICE})
+@CoreImpl(type =  {CoreImpl.ImplType.REPO})
 public class Professor extends Person {
 
     @ManyToOne(cascade = CascadeType.ALL)

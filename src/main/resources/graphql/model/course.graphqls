@@ -1,0 +1,25 @@
+type Course {
+    id: Int
+    name: String
+    description: String
+    nmbOfLecture: Int
+    nmbOfExercise: Int
+    version: Int
+    createdOn: String
+    updatedOn: String
+}
+
+input CourseInput {
+    id: Int
+    name: String
+    description: String
+    nmbOfLecture: Int
+    nmbOfExercise: Int
+    version: Int
+}
+
+type PageCourse {
+    content: [Course]
+    totalPages: Int
+    totalElements: Int
+}

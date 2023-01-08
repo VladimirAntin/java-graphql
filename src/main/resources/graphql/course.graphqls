@@ -1,6 +1,0 @@
-type Course {
-    name: String
-    description: String
-    nmbOfLecture: Int
-    nmbOfExercise: Int
-}

@@ -1,0 +1,23 @@
+type Professor {
+    id: Int
+    name: String
+    surname: String
+    title: ProfessorTitle
+    version: Int
+    createdOn: String
+    updatedOn: String
+}
+
+input ProfessorInput {
+    id: Int
+    title: CoreId
+    name: String!
+    surname: String!
+    version: Int
+}
+
+type PageProfessor {
+    content: [Professor]
+    totalPages: Int
+    totalElements: Int
+}

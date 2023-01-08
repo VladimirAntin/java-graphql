@@ -13,3 +13,9 @@ input ProfessorTitleInput {
     version: Int
 }
 
+
+type PageProfessorTitle {
+    content: [ProfessorTitle]
+    totalPages: Int
+    totalElements: Int
+}
