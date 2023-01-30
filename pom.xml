@@ -86,7 +86,7 @@
         <dependency>
             <groupId>com.github.vladimirantin</groupId>
             <artifactId>spring-core</artifactId>
-            <version>1.4.2</version>
+            <version>1.5</version>
             <scope>provided</scope>
         </dependency>
 

@@ -8,9 +8,10 @@ insert into professor_title(id, version, name) values (7, 0, 'Academic');
 
 
 insert into professor(version, name, surname, title_id) values (0, 'Vladimir', 'Antin', 7);
-insert into professor(version, name, surname, title_id) values (0, 'Jason', 'Statham', 6);
-insert into professor(version, name, surname, title_id) values (0, 'Vin', 'Diesel', 6);
-insert into professor(version, name, surname, title_id) values (0, 'Dwayne', 'Johnson', 6);
+insert into professor(version, name, surname, title_id) values (0, 'Nikola', 'Tesla', 6);
+insert into professor(version, name, surname, title_id) values (0, 'Random', 'Profesor', 5);
+insert into professor(version, name, surname, title_id) values (0, 'Albert', 'Ajnstajn', 4);
+insert into professor(version, name, surname, title_id) values (0, 'Carls', 'Darvin', 3);
 
 
 insert into course(version, description, name, nmb_of_exercise, nmb_of_lecture) values (0, '', 'Basic of programming',5,5);

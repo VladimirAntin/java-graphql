@@ -1,0 +1,310 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2023-01-19T08:00:38.753Z",
+  "__export_source": "insomnia.desktop.app:v2022.7.1",
+  "resources": [
+    {
+      "_id": "req_b425fcba5e21456aa9c771d81552dc78",
+      "parentId": "fld_94f5646eab2249eab30e04ae231e9038",
+      "modified": 1674115186071,
+      "created": 1674115186071,
+      "url": "localhost:8080/graphql",
+      "name": "titles",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"\\nquery {\\n\\tprofessorTitles(page: 0, size: 10) {\\n\\t\\tcontent {\\n\\t\\t\\tname\\n\\t\\t\\tcreatedOn\\n\\t\\t\\tupdatedOn\\n\\t\\t\\tversion\\n\\t\\t}\\n\\t\\ttotalElements\\n\\t\\ttotalPages\\n\\t}\\n}\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1667154765728,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_94f5646eab2249eab30e04ae231e9038",
+      "parentId": "wrk_6aae24e3dc704669abe2052686fffd7f",
+      "modified": 1674115186068,
+      "created": 1674115186068,
+      "name": "eo-graph",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1000000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_6aae24e3dc704669abe2052686fffd7f",
+      "parentId": null,
+      "modified": 1674115175714,
+      "created": 1674115175714,
+      "name": "graphql",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_50bcfdd93bd14c9caaecb1471225cce4",
+      "parentId": "fld_94f5646eab2249eab30e04ae231e9038",
+      "modified": 1674115186143,
+      "created": 1674115186143,
+      "url": "localhost:8080/graphql",
+      "name": "professors",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"\\nquery {\\n\\tprofessors(page: 0, size: 10) {\\n\\t\\tcontent {\\n\\t\\t\\tname\\n\\t\\t\\tsurname\\n\\t\\t\\ttitle {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tname\\n\\t\\t\\t}\\n\\t\\t\\tcreatedOn\\n\\t\\t\\tupdatedOn\\n\\t\\t\\tversion\\n\\t\\t}\\n\\t\\ttotalElements\\n\\t\\ttotalPages\\n\\t}\\n}\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1666820350831.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_049845a4b00947578a98c51711c988d2",
+      "parentId": "fld_94f5646eab2249eab30e04ae231e9038",
+      "modified": 1674115186105,
+      "created": 1674115186105,
+      "url": "localhost:8080/graphql",
+      "name": "one title",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"\\nquery {\\n\\tprofessorTitle(id: 10) {\\n\\t\\tid\\n\\t\\tname\\n\\t\\tversion\\t\\t\\t\\n\\t}\\n}\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1666485935934.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_68c1604c9f37447ead60490f0a28bfb3",
+      "parentId": "fld_94f5646eab2249eab30e04ae231e9038",
+      "modified": 1674115186079,
+      "created": 1674115186079,
+      "url": "localhost:8080/graphql",
+      "name": "titles(create)",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"\\nmutation {\\n\\tcreateProfessorTitle(\\n\\t\\tprofessorTitle: {\\n\\t\\t\\tname: \\\"test124141441414141\\\"\\n\\t\\t\\tversion: 2\\n\\t\\t}\\n\\t) {\\n\\t\\tid\\n\\t\\tname\\n\\t\\tversion\\n\\t}\\n}\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1665817106141,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a89cae332a9144f6a9304184befeb796",
+      "parentId": "fld_94f5646eab2249eab30e04ae231e9038",
+      "modified": 1674115186129,
+      "created": 1674115186129,
+      "url": "localhost:8080/graphql",
+      "name": "professor(create)",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"\\nmutation {\\n\\tcreateProfessor(\\n\\t\\tprofessor: {\\n\\t\\t\\tname: \\\"Profesor\\\",\\n\\t\\t\\tsurname: \\\"bas faca\\\",\\n\\t\\t\\ttitle: {\\n\\t\\t\\t\\tid: 5\\n\\t\\t\\t}\\n\\t\\t}\\n\\t) {\\n\\t\\tid\\n\\t\\tname\\n\\t\\tsurname\\n\\t\\ttitle {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t}\\n\\t\\tversion\\n\\t}\\n}\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1665649898692.625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6ff50918dc244eb7958dfa032ffabfb7",
+      "parentId": "fld_94f5646eab2249eab30e04ae231e9038",
+      "modified": 1674115186153,
+      "created": 1674115186153,
+      "url": "localhost:8080/graphql",
+      "name": "professor(update)",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"\\nmutation {\\n\\tupdateProfessor(\\n\\t\\tprofessor: {\\n\\t\\t\\tid: 6\\n\\t\\t\\tname: \\\"Profesor\\\",\\n\\t\\t\\tsurname: \\\"neka\\\",\\n\\t\\t\\ttitle: {\\n\\t\\t\\t\\tid: 5\\n\\t\\t\\t}\\n\\t\\t}\\n\\t) {\\n\\t\\tid\\n\\t\\tname\\n\\t\\tsurname\\n\\t\\ttitle {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t}\\n\\t\\tversion\\n\\t}\\n}\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1665566294968.4375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_01c3388d32174b3a84fb4344555eda9a",
+      "parentId": "fld_94f5646eab2249eab30e04ae231e9038",
+      "modified": 1674115186116,
+      "created": 1674115186116,
+      "url": "localhost:8080/graphql",
+      "name": "titles(update)",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"\\nmutation {\\n\\tupdateProfessorTitle(\\n\\t\\tprofessorTitle: {\\n\\t\\t\\tid: 10\\n\\t\\t\\tname: \\\"test124141441414141\\\"\\n\\t\\t\\tversion: 2\\n\\t\\t}\\n\\t) {\\n\\t\\tid\\n\\t\\tname\\n\\t\\tversion\\n\\t}\\n}\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1665482691244.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_401768777b7447bf85f644be0d85a1c6",
+      "parentId": "fld_94f5646eab2249eab30e04ae231e9038",
+      "modified": 1674115186091,
+      "created": 1674115186091,
+      "url": "localhost:8080/graphql",
+      "name": "titles(delete)",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"\\nmutation {\\n\\tdeleteProfessorTitle(\\n\\t\\tid: 2\\n\\t) \\n}\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1665148276347.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_c64d03f52d64fcfea3c0c59a7a87ffd78ca90707",
+      "parentId": "wrk_6aae24e3dc704669abe2052686fffd7f",
+      "modified": 1674115175719,
+      "created": 1674115175719,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1674115175719,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_c64d03f52d64fcfea3c0c59a7a87ffd78ca90707",
+      "parentId": "wrk_6aae24e3dc704669abe2052686fffd7f",
+      "modified": 1674115175721,
+      "created": 1674115175721,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_b2aa4442bfde482fb574724910f5228b",
+      "parentId": "wrk_6aae24e3dc704669abe2052686fffd7f",
+      "modified": 1674115175715,
+      "created": 1674115175715,
+      "fileName": "graphql",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
